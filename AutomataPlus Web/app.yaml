@@ -1,0 +1,14 @@
+application: automataplusapp
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /stylesheets
+  static_dir: CSS_Stylesheets
+  
+- url: /images
+  static_dir: Images
+
+- url: /.*
+  script: UserReportForm.py

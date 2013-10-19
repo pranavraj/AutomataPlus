@@ -1,0 +1,5 @@
+S,A,B
+a,b
+S->SA
+A->a|B
+B->Ba|Ab

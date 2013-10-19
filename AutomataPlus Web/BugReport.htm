@@ -1,0 +1,237 @@
+<html>
+
+	<head>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/DefaultSheet.css" />
+	</head>
+	
+	<body>
+	
+	<body background="/images/automata+.jpg" bgproperties="fixed">
+	
+	<form name=frmSubmit ACTION=http://www.bughost.com/websubmit.asp METHOD=POST>
+		<input type=hidden name=x_Login value=BTXGK6MG00AF3GU5HA8R>
+		<table BORDER=0 CELLSPACING=8 CELLPADDING=5>
+			<tr class=bhRow>
+				<td class=bhFieldRequired>Reported By *</td>
+				<td class=bhFieldInput>
+					<input name=x_ReportedBy size=50 maxlength=128 class=bhTextBox>
+				</td>
+			</tr>
+			
+			<tr class=bhRow>
+				<td class=bhFieldRequired>Application *</td>
+				<td class=bhFieldInput>
+					<select name=x_Application class=bhDropDown>
+						<option value=0>&nbsp;</option>
+						<option value=1>Automata+</option>
+					</select>
+				</td>
+			</tr>
+			<p>
+			<p>
+			<tr class=bhRow>
+				<td class=bhFieldRequired>Module *</td>
+				<td class=bhFieldInput>
+					<select name=x_Module class=bhDropDown>
+						<option value=0>&nbsp;</option>
+						<option value=1>Automata</option>
+						<option value=2>Grammar</option>
+						<option value=3>Regular Expression</option>
+						<option value=4>Regular Pumping Lemma</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr class=bhRow>
+				<td class=bhFieldRequired>Summary *</td>
+				<td class=bhFieldInput>
+					<textarea name=x_Summary class=bhTextArea cols=60 rows=4 onkeyup="Summary_OnChange();"></textarea>
+				</td>
+			</tr>
+			
+			<tr class=bhRow>
+				<td class=bhFieldRequired>Automata /<p>Grammar /<p>RE (if any)</td>
+				<td class=bhFieldInput>
+					<textarea name=x_Notes class=bhTextArea cols=60 rows=10></textarea>
+				</td>
+			</tr>
+
+			<tr class=bhRow>
+				<td class=bhField>Description</td>
+				<td class=bhFieldInput>
+					<textarea name=x_Description class=bhTextArea cols=60 rows=8 onkeyup="Description_OnChange();"></textarea>
+				</td>
+			</tr>
+
+			<tr class=bhRow>
+				<td class=bhFieldRequired>OS *</td>
+				<td class=bhFieldInput>
+					<input name=x_OS class=bhCheckBox type=checkbox value=4> Windows 7<br>
+					<input name=x_OS class=bhCheckBox type=checkbox value=3> Windows Vista<br>
+					<input name=x_OS class=bhCheckBox type=checkbox value=1> Windows XP<br>
+				</td>
+			</tr>
+
+			<tr class=bhRow>
+				<td class=bhFieldRequired>Found In Version *</td>
+				<td class=bhFieldInput>
+					<select name=x_FoundInVersion class=bhDropDown>
+					<option value=0>&nbsp;</option>
+					<option value=1>Version 1.0.0</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr class=bhRow>
+				<td class=bhFieldRequired>Type of Bug *</td>
+				<td class=bhFieldInput>
+					<select name=x_BugType class=bhDropDown>
+						<option value=0>&nbsp;</option>
+						<option value=1>Annoyance</option>
+						<option value=2>Data Loss</option>
+						<option value=6>Display / GUI Problem</option>
+						<option value=5>Feature Request</option>
+						<option value=4>Functional Problem</option>
+						<option value=3>Suggestion</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr class=bhRow>
+				<td class=bhField>Category</td>
+				<td class=bhFieldInput>
+					<select name=x_Category class=bhDropDown>
+						<option value=0>&nbsp;</option>
+						<option value=1>Application</option>
+						<option value=2>Theory</option>
+					</select>
+				</td>
+			</tr>
+
+		</table>
+	<br>
+		<p align=center>
+		<a href="http://www.bughost.com?ref=bhc" target=_new><img src="http://www.bughost.com/images/TrackedByBugHost.gif" width=100 height=30 border=0></a><br>	Bugs tracked by <a href="http://www.bughost.com?ref=ax" target=_new>BugHost</a><sup>TM</sup></p>
+		<input type=button name=cmdSubmit onClick="Submit_OnClick();" value="Submit Bug" class=bhButton>
+		</form>
+
+
+		<script language="javascript">
+		function Summary_OnChange() 
+		{
+			s1 = new String(document.frmSubmit.x_Summary.value);
+
+			if (s1.length>255)
+				{ 
+					document.frmSubmit.x_Summary.value = s1.substr(0,255);
+				}
+		}
+		</script>
+
+		<script language="javascript">
+		function Description_OnChange() 
+		{
+			s1 = new String(document.frmSubmit.x_Description.value);
+
+			if (s1.length>5000)
+				{ 
+					document.frmSubmit.x_Description.value = s1.substr(0,5000);
+				}
+		}
+		</script>
+
+		<script language="javascript">
+		function Submit_OnClick() 
+		{
+			bolError = new Boolean(false);
+
+			if (document.forms.frmSubmit.x_ReportedBy.value == "") 
+			{
+				window.alert("All marked fields (*) are required before submitting.  Please fill out all required fields and try again.");
+				bolError = true;
+			}
+
+			if (bolError!=true) 
+			{
+				if (document.forms.frmSubmit.x_Application.value == "0") 
+				{
+					window.alert("All marked fields (*) are required before submitting.  Please fill out all required fields and try again.");
+					bolError = true;
+				}
+
+			}
+
+			if (bolError!=true) 
+			{
+				if (document.forms.frmSubmit.x_Module.value == "0") 
+				{
+					window.alert("All marked fields (*) are required before submitting.  Please fill out all required fields and try again.");
+					bolError = true;
+				}
+
+			}
+
+			if (bolError!=true) 
+			{
+				if (document.forms.frmSubmit.x_Summary.value == "") 
+				{
+					window.alert("All marked fields (*) are required before submitting.  Please fill out all required fields and try again.");
+					bolError = true;
+				}
+
+			}
+
+			if (bolError!=true) 
+			{
+				bolFound = new Boolean(false);
+
+				for (var i=0;i<document.forms.frmSubmit.elements.length;i++) 
+				{
+					var e = document.forms.frmSubmit.elements[i];
+					if (e.name=='x_OS') 
+					{
+						if (e.checked) 
+						{
+							bolFound = true;
+						}
+					}
+				}
+
+				if (bolFound!=true) 
+				{
+					window.alert("All marked fields (*) are required before submitting.  Please fill out all required fields and try again.");
+					bolError = true;
+				}
+
+			}
+
+			if (bolError!=true) 
+			{
+				if (document.forms.frmSubmit.x_FoundInVersion.value == "") 
+				{
+					window.alert("All marked fields (*) are required before submitting.  Please fill out all required fields and try again.");
+					bolError = true;
+				}
+
+			}
+
+			if (bolError!=true) 
+			{
+				if (document.forms.frmSubmit.x_BugType.value == "0") 
+				{
+					window.alert("All marked fields (*) are required before submitting.  Please fill out all required fields and try again.");
+					bolError = true;
+				}
+
+			}
+
+			if (bolError!=true) 
+			{
+				document.frmSubmit.submit();
+			}
+		}
+		</script>
+		
+	</body>
+	
+</html>
