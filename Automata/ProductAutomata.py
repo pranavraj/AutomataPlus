@@ -52,8 +52,7 @@ def product_Automata(File1,File2):
                 new_state.Final = 1
             DFA_Product.append(new_state)
     return DFA_Product
-"""
-Dfa_Product = product_Automata('DFA.txt','DFA1.txt')
-for state in Dfa_Product:
-    state.display()
-"""
+if __name__ == "__main__":
+    Dfa_Product = product_Automata('DFA.txt','DFA1.txt')
+    for state in Dfa_Product:
+        state.display()

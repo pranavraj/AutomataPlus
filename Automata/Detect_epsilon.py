@@ -11,7 +11,6 @@ def detect_Epsilon(StateList):
             eps_states[state.StateName] = eps_state
     return eps_states        
 
-"""
-StateList,Accepted,Initial = AutomataRead.FileRead("DFA.txt")          
-detect_Epsilon(StateList)
-"""
+if __name__ == "__main__":
+    StateList,Accepted,Initial = AutomataRead.FileRead("DFA.txt")          
+    detect_Epsilon(StateList)

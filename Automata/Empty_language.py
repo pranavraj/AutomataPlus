@@ -25,7 +25,7 @@ def check_Empty(StateList,Accepted,Initial):
                     return "Automata accepts some language"
 
         return "Automata has empty language"
-"""
-StateList,Accepted,Initial = AutomataRead.FileRead('DFA.txt')
-check_Empty(StateList,Accepted,Initial)
-"""
+
+if __name__ == "__main__":
+    StateList,Accepted,Initial = AutomataRead.FileRead('DFA.txt')
+    check_Empty(StateList,Accepted,Initial)

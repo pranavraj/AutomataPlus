@@ -30,7 +30,7 @@ def convert_Dfa2grammar(StateList):
     for rule in Rules:
         Message = Message + str(rule) + '\n'
     return Message
-"""
-StateList,Accepted,Initial = AutomataRead.FileRead('C:/Python26/Lib/site-packages/Automata/DFA.txt')
-print convert_Dfa2grammar(StateList)
-"""
+
+if __name__ == "__main__":
+    StateList,Accepted,Initial = AutomataRead.FileRead('C:/Python26/Lib/site-packages/Automata/DFA.txt')
+    print convert_Dfa2grammar(StateList)

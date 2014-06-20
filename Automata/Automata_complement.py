@@ -11,9 +11,9 @@ def automata_Complement(StateList,Accepted,Initial):
             String = String + str(state.StateName) + " was earlier a non accepting state so it is being converted to accepting one \n "
             state.Final = 1
     return StateList,Accepted_Complement,Initial,String
-"""
-StateList,Accepted,Initial = AutomataRead.FileRead('DFA.txt')
-StateList,Accepted_Complement,Initial = automata_Complement(StateList)
-for state in StateList:
-    state.display()
-"""
+
+if __name__ == "__main__":
+    StateList,Accepted,Initial = AutomataRead.FileRead('DFA.txt')
+    StateList,Accepted_Complement,Initial = automata_Complement(StateList)
+    for state in StateList:
+        state.display()

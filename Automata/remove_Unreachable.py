@@ -16,9 +16,9 @@ def remove_unreachable(StateList,Initial,num_Var):
                 StateList.remove(state)
 
     return StateList
-"""
-StateList,Accepted,Initial = AutomataRead.FileRead('DFA.txt')
-StateList = remove_unreachable(StateList,Initial,AutomataRead.State.num_variables)
-for state in StateList:
-    state.display()
-"""
+
+if __name__ == "__main__":
+    StateList,Accepted,Initial = AutomataRead.FileRead('DFA.txt')
+    StateList = remove_unreachable(StateList,Initial,AutomataRead.State.num_variables)
+    for state in StateList:
+        state.display()

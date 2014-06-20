@@ -81,9 +81,8 @@ def transform_Dfa(StateList,initial,Accepted):
         for state in DFAList:
             state.display()
         return DFAList,String
-"""
-StateList,Accepted,Initial = AutomataRead.FileRead('NFA.txt')
-DFAList = transform_Dfa(StateList,Initial,Accepted)
-for state in DFAList:
-    state.display()
-"""
+if __name__ == "__main__":
+    StateList,Accepted,Initial = AutomataRead.FileRead('NFA.txt')
+    DFAList = transform_Dfa(StateList,Initial,Accepted)
+    for state in DFAList:
+        state.display()

@@ -44,10 +44,11 @@ def removeUseless_State(StateList,Accepted,Initial):
     AutomataRead.update_next_Transition(StateList)
 
     return StateList
-"""
-StateList,Accepted,Initial = AutomataRead.FileRead('DFA.txt')
-StateList =  removeUseless_State(StateList,Accepted)
-for state in StateList:
-    state.display()
-"""
+
+if __name__ == "__main__":
+    StateList,Accepted,Initial = AutomataRead.FileRead('DFA.txt')
+    StateList =  removeUseless_State(StateList,Accepted)
+    for state in StateList:
+        state.display()
+
     

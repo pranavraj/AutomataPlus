@@ -16,7 +16,7 @@ def detect_Nondet(StateList):
             else:
                 non_det[state.StateName] = trans1
     return non_det            
-"""    
-StateList,Accepted,Initial = AutomataRead.FileRead("DFA.txt")        
-detect_Nondet(StateList)
-"""
+
+if __name__ == "__main__":    
+    StateList,Accepted,Initial = AutomataRead.FileRead("DFA.txt")        
+    detect_Nondet(StateList)

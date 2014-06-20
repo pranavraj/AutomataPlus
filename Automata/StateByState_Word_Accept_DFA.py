@@ -36,4 +36,5 @@ def word_Accept(File,word):
     if(reached == 0):
         print "Word does not get accepted"
 
-word_Accept('DFA.txt','abb')
+if __name__ == "__main__":
+    word_Accept('DFA.txt','abb')

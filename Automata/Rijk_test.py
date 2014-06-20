@@ -120,4 +120,5 @@ def Rijk(File):
                 print RExp , "is" , Finalarray[RExp],'\n'
     print "Language of Automata is",Finalarray['1'+str(len(StateList))+str(len(StateList))]
 
-Rijk('DFA.txt')
+if __name__ == "__main__":
+    Rijk('DFA.txt')

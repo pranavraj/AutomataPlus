@@ -45,9 +45,8 @@ def automata_Reverse(StateList,Accepted,Initial):
     for state in Rev_State:
         state.display()
     return Rev_State,Rev_Accepted,Rev_Initial,String
-"""
-StateList,Accepted,Initial = AutomataRead.FileRead('DFA.txt')
-FSA_reverse,Rev_Accpt,Rev_Initial = automata_Reverse(StateList,Accepted,Initial)
-for state in FSA_reverse:
-    state.display()
-"""
+if __name__ == "__main__":
+    StateList,Accepted,Initial = AutomataRead.FileRead('DFA.txt')
+    FSA_reverse,Rev_Accpt,Rev_Initial = automata_Reverse(StateList,Accepted,Initial)
+    for state in FSA_reverse:
+        state.display()

@@ -32,7 +32,7 @@ def state_elimination(StateList,Accepted,Initial):
     dict_DFA = Alphabet_Dict.convert_to_dict(StateList)
     string = convertFSA_RE(dict_DFA,Accepted,Initial)
     return string
-"""
-StateList,Accepted,Initial = AutomataRead.FileRead('C:/Python26/Lib/site-packages/Automata/DFA.txt')
-state_elimination(StateList,Accepted,Initial)
-"""
+
+if __name__ == "__main__":
+    StateList,Accepted,Initial = AutomataRead.FileRead('C:/Python26/Lib/site-packages/Automata/DFA.txt')
+    state_elimination(StateList,Accepted,Initial)

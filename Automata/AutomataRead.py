@@ -104,7 +104,6 @@ def FileRead(AutomataFile) :
     DFAFile.close()
 
     return StateList,AccpStates,InitialStates
-"""
-StateList,AccpStates,InitialStates = FileRead('DFA.txt')
-display(StateList)
-"""
+if __name__ == "__main__":
+    StateList,AccpStates,InitialStates = FileRead('DFA.txt')
+    display(StateList)

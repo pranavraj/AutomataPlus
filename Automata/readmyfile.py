@@ -54,8 +54,7 @@ def changeformat(mydict,final,start):
     f1.write(final_states)
     f1.write('\n')
     f1.close()
-"""
 
-di={'A':[['a','A'],['b','B'],['a','C']],'B':[['c','C']]}
-changeformat(di,['C'],'A')
-"""
+if __name__ == "__main__":
+    di={'A':[['a','A'],['b','B'],['a','C']],'B':[['c','C']]}
+    changeformat(di,['C'],'A')
